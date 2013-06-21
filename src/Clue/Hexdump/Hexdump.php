@@ -19,7 +19,7 @@ class Hexdump
     /**
      * @var bool Set to false for non-HTML output
      */
-    private $htmloutput = true;
+    private $htmloutput = false;
 
     /**
      * View any string as a hexdump.
