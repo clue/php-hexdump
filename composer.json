@@ -1,0 +1,13 @@
+{
+    "name": "clue/hexdump",
+    "description": "View any (binary) string as a hexdump",
+    "keywords": ["hexdump", "binary", "network protocol debugging"],
+    "homepage": "https://github.com/clue/hexdump",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-0": {"Clue\\Hexdump": "src/"}
+    }
+}
