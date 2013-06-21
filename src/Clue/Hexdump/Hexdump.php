@@ -19,11 +19,6 @@ class Hexdump
     private $uppercase = false;
 
     /**
-     * @var bool Set to false for non-HTML output
-     */
-    private $htmloutput = false;
-
-    /**
      * View any string as a hexdump.
      *
      * @param string $data The string to be dumped
@@ -34,7 +29,7 @@ class Hexdump
         // Init
         $hexi   = '';
         $ascii  = '';
-        $dump   = ($this->htmloutput === true) ? '<pre>' : '';
+        $dump   = '';
         $offset = 0;
         $len    = strlen($data);
 
@@ -49,9 +44,7 @@ class Hexdump
 
             // Replace non-viewable bytes with '.'
             if (ord($data[$i]) >= 32) {
-                $ascii .= ($this->htmloutput === true) ?
-                    htmlentities($data[$i]) :
-                    $data[$i];
+                $ascii .= $data[$i];
             } else {
                 $ascii .= '.';
             }
@@ -80,11 +73,21 @@ class Hexdump
         }
 
         // Finish dump
-        $dump .= $this->htmloutput === true ?
-                '</pre>' :
-                '';
         $dump .= "\n";
 
         return $dump;
+    }
+
+    /**
+     * View any string as a hexdump, save for inclusion into a HTML webpage
+     *
+     * @param string $data
+     * @return string
+     * @uses self::dump()
+     * @uses htmlentities()
+     */
+    public function dumpHtml($data)
+    {
+        return '<pre>' . htmlentities($this->dump($data), ENT_NOQUOTES, 'UTF-8') . '</pre>' . "\n";
     }
 }
