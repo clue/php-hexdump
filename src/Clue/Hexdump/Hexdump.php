@@ -8,6 +8,8 @@ namespace Clue\Hexdump;
  * This is most commonly used to view binary data from streams
  * or sockets while debugging, but can be used to view any string
  * with non-viewable characters.
+ *
+ * @link https://github.com/clue/hexdump
  */
 class Hexdump
 {
@@ -24,13 +26,10 @@ class Hexdump
     /**
      * View any string as a hexdump.
      *
-     * @version     1.3.2
-     * @author      Aidan Lister <aidan@php.net>
-     * @author      Peter Waller <iridum@php.net>
-     * @link        http://aidanlister.com/2004/04/viewing-binary-data-as-a-hexdump-in-php/
-     * @param       string  $data        The string to be dumped
+     * @param string $data The string to be dumped
+     * @return string
      */
-    function dump ($data)
+    public function dump ($data)
     {
         // Init
         $hexi   = '';
