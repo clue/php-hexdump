@@ -1,5 +1,7 @@
 # clue/hexdump
 
+View any (binary) string as a hexdump
+
 This is most commonly used to view binary data from streams
 or sockets while debugging, but can be used to view any string
 with non-viewable characters.
@@ -39,6 +41,6 @@ All credits go to Aidan Lister. This library is based on
 [his work](https://github.com/aidanlister/code/blob/master/function.hexdump.php)
 which has been released as public domain.
 
-This library merely a standalone version that can easily be installed via
-composer. It's released under the terms of the permisse MIT license.
+This library is merely a standalone version that can be easily installed via
+composer. It's released under the terms of the permissive MIT license.
 
