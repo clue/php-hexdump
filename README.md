@@ -1,4 +1,4 @@
-# clue/hexdump
+# clue/hexdump [![Build Status](https://travis-ci.org/clue/hexdump.png)](https://travis-ci.org/clue/hexdump)
 
 View any (binary) string as a hexdump
 
