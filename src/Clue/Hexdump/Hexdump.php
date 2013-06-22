@@ -88,6 +88,9 @@ class Hexdump
      */
     public function dumpHtml($data)
     {
-        return '<pre>' . htmlentities($this->dump($data), ENT_NOQUOTES, 'UTF-8') . '</pre>' . "\n";
+        if ($data !== '') {
+            $data = htmlentities($this->dump($data), ENT_NOQUOTES, 'UTF-8');
+        }
+        return "<pre>\n" . $data . "</pre>\n";
     }
 }
