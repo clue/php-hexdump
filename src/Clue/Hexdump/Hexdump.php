@@ -50,7 +50,7 @@ class Hexdump
             }
 
             // Add extra column spacing
-            if ($j === 7) {
+            if ($j === 7 && $i !== $len - 1) {
                 $hexi  .= ' ';
                 $ascii .= ' ';
             }
