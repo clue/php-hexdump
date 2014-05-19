@@ -2,7 +2,7 @@
     "name": "clue/hexdump",
     "description": "View any (binary) string as a hexdump",
     "keywords": ["hexdump", "binary", "network protocol debugging"],
-    "homepage": "https://github.com/clue/hexdump",
+    "homepage": "https://github.com/clue/php-hexdump",
     "license": "MIT",
     "require": {
         "php": ">=5.3"
